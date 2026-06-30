@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>RMA Pathway — Stepping Stones to Episode 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c130e;--bg2:#0f1711;--surface:#141d17;--surface2:#18221b;
+    --line:#243027;--line2:#2e3c31;--ink:#e9efe6;--muted:#94a596;--faint:#6b7d6f;
+    --gold:#e6b14e;--moss:#67c186;--amber:#e6b14e;--clay:#dd7a55;--slate:#5a6b5d;
+    --moss-bg:rgba(103,193,134,.13);--amber-bg:rgba(230,177,78,.13);--slate-bg:rgba(90,107,93,.1);
+    --serif:'Fraunces',Georgia,serif;--sans:'Hanken Grotesk',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+    --maxw:1240px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:radial-gradient(1100px 560px at 85% -10%,rgba(230,177,78,.05),transparent 60%),var(--bg);
+    color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(16px,3.5vw,36px)}
+  a{color:inherit}
+
+  header{padding:clamp(30px,5vw,56px) 0 18px}
+  .eyebrow{font:500 12px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+  h1{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,5vw,3.5rem);line-height:1.04;letter-spacing:-.025em;max-width:18ch}
+  h1 em{font-style:italic;color:var(--gold);font-weight:400}
+  .sub{margin-top:16px;color:var(--muted);max-width:62ch;font-size:clamp(.98rem,1.5vw,1.1rem)}
+  .sub b{color:var(--ink);font-weight:600}
+
+  /* this-week strip */
+  .thisweek{margin:30px 0 6px}
+  .tw-lab{font:600 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:12px;display:flex;align-items:center;gap:9px}
+  .tw-lab::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 10px var(--amber)}
+  .tw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .tw{background:linear-gradient(180deg,var(--amber-bg),var(--surface));border:1px solid rgba(230,177,78,.3);border-radius:14px;padding:15px 16px;cursor:pointer;transition:.16s}
+  .tw:hover{border-color:var(--amber);transform:translateY(-1px)}
+  .tw .lane{font:600 11px/1 var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--gold);display:flex;gap:7px;align-items:center}
+  .tw .move{font-family:var(--serif);font-size:1.12rem;font-weight:600;margin-top:8px;letter-spacing:-.01em;line-height:1.15}
+  .tw .who{margin-top:8px;font:500 12px/1 var(--mono);color:var(--faint)}
+  .tw .who::before{content:"▷ "}
+
+  /* lanes */
+  .lanes{margin:34px 0 10px;display:flex;flex-direction:column;gap:14px}
+  .lane{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px clamp(14px,2vw,20px)}
+  .lane-head{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+  .lane-ic{font-size:1.35rem;line-height:1}
+  .lane-nm{font-family:var(--serif);font-weight:600;font-size:1.22rem;letter-spacing:-.01em}
+  .lane-lead{font:500 12px/1 var(--mono);color:var(--faint);margin-left:auto}
+  .lane-lead::before{content:"lead · ";color:var(--line2)}
+
+  .track{display:flex;align-items:stretch;gap:0;flex-wrap:wrap}
+  .stone{flex:1 1 150px;min-width:150px;position:relative;display:flex;align-items:center;gap:10px;
+    background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:12px 13px;margin:5px 0;cursor:pointer;transition:.15s}
+  .stone+.stone{margin-left:26px}
+  /* connector arrow between stones in a lane */
+  .stone+.stone::before{content:"";position:absolute;left:-23px;top:50%;width:20px;height:1.5px;background:var(--line2)}
+  .stone+.stone::after{content:"";position:absolute;left:-9px;top:50%;transform:translateY(-50%);
+    border-left:5px solid var(--line2);border-top:4px solid transparent;border-bottom:4px solid transparent}
+  .stone:hover{border-color:var(--line2);transform:translateY(-2px)}
+  .stone:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .dot{flex:0 0 auto;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;
+    border:1.5px solid var(--slate);color:var(--slate);background:transparent}
+  .stone.done .dot{border-color:var(--moss);background:var(--moss);color:#0c130e}
+  .stone.now .dot{border-color:var(--amber);background:var(--amber);color:#0c130e}
+  .stone.now{border-color:rgba(230,177,78,.45);background:linear-gradient(180deg,var(--amber-bg),var(--bg2));
+    box-shadow:0 0 0 1px rgba(230,177,78,.15);animation:pulse 2.4s ease-in-out infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 1px rgba(230,177,78,.12)}50%{box-shadow:0 0 0 4px rgba(230,177,78,.16)}}
+  .stone.locked{opacity:.62}
+  .s-t{display:block;font-size:13.5px;font-weight:600;letter-spacing:-.005em;line-height:1.25}
+  .stone span span{display:block}
+  .s-meta{font:500 10.5px/1.3 var(--mono);color:var(--faint);margin-top:3px}
+  .needs{display:inline-block;margin-top:4px;font:600 9.5px/1.3 var(--sans);color:var(--clay);
+    background:rgba(221,122,85,.12);padding:2px 6px;border-radius:5px;letter-spacing:.02em}
+  /* destination */
+  .dest{flex:0 0 auto;align-self:center;display:flex;align-items:center;gap:9px;margin-left:26px;position:relative;
+    padding:11px 15px;border-radius:12px;border:1px dashed var(--line2);color:var(--muted);font:600 12.5px/1.2 var(--sans)}
+  .dest::before{content:"";position:absolute;left:-23px;top:50%;width:20px;height:1.5px;background:var(--line2)}
+  .dest .flag{font-size:1.1rem}
+
+  .legend{display:flex;gap:16px;flex-wrap:wrap;margin:8px 2px 0;color:var(--muted);font-size:12.5px}
+  .legend span{display:inline-flex;align-items:center;gap:7px}
+  .lg{width:13px;height:13px;border-radius:50%}
+  .lg.d{background:var(--moss)}.lg.n{background:var(--amber)}.lg.l{background:transparent;border:1.5px solid var(--slate)}
+
+  footer{border-top:1px solid var(--line);margin-top:30px;padding:24px 0 46px;color:var(--faint);font-size:12.5px;
+    display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between}
+  footer a{color:var(--moss);text-decoration:none}
+
+  /* modal */
+  .overlay{position:fixed;inset:0;background:rgba(6,10,7,.74);backdrop-filter:blur(4px);display:none;
+    align-items:center;justify-content:center;padding:20px;z-index:80}
+  .overlay.open{display:flex}
+  .modal{background:var(--surface);border:1px solid var(--line2);border-radius:18px;max-width:480px;width:100%;
+    padding:24px clamp(20px,3vw,28px);position:relative;max-height:86vh;overflow:auto}
+  .modal .x{position:absolute;top:14px;right:16px;background:none;border:none;color:var(--faint);font-size:22px;cursor:pointer;line-height:1}
+  .modal .x:hover{color:var(--ink)}
+  .m-lane{font:600 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--gold);display:flex;gap:8px;align-items:center}
+  .m-pin{font:600 10px/1 var(--sans);text-transform:uppercase;letter-spacing:.04em;padding:3px 8px;border-radius:6px;margin-left:6px}
+  .m-pin.done{color:var(--moss);background:var(--moss-bg)}.m-pin.now{color:var(--amber);background:var(--amber-bg)}.m-pin.locked{color:var(--slate);background:var(--slate-bg)}
+  .modal h3{font-family:var(--serif);font-weight:600;font-size:1.5rem;letter-spacing:-.02em;margin:12px 0 4px;line-height:1.1}
+  .m-who{font:500 12px/1 var(--mono);color:var(--faint);margin-bottom:14px}
+  .modal p{color:var(--muted);font-size:14.5px;margin-bottom:14px}
+  .m-unlock{font-size:13px;color:var(--ink);background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-bottom:14px}
+  .m-unlock b{color:var(--moss)}
+  .m-links{display:flex;flex-direction:column;gap:8px}
+  .m-links a{display:flex;align-items:center;justify-content:space-between;gap:10px;font:600 13px/1.2 var(--sans);
+    color:var(--ink);background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:11px 13px;text-decoration:none;transition:.14s}
+  .m-links a:hover{border-color:var(--moss);color:var(--moss)}
+
+  @media(max-width:760px){
+    .tw-grid{grid-template-columns:1fr}
+    .track{flex-direction:column;align-items:stretch}
+    .stone{flex:1 1 auto;min-width:0}
+    .stone+.stone{margin-left:0;margin-top:24px}
+    .stone+.stone::before{left:50%;top:-18px;width:1.5px;height:14px}
+    .stone+.stone::after{left:50%;top:-6px;transform:translateX(-50%);border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid var(--line2);border-bottom:none}
+    .dest{margin-left:0;margin-top:24px;align-self:stretch;justify-content:center}
+    .dest::before{left:50%;top:-18px;width:1.5px;height:14px}
+    .lane-lead{margin-left:0;flex-basis:100%;margin-top:2px}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a href="rma-home.html" style="display:inline-flex;align-items:center;gap:6px;font:600 12.5px/1 var(--sans);color:var(--muted);text-decoration:none;margin-bottom:18px;transition:.15s" onmouseover="this.style.color='var(--moss)'" onmouseout="this.style.color='var(--muted)'">← Home</a>
+    <p class="eyebrow">Regenerative Media Alliance · Pathway</p>
+    <h1>Three lanes, one <em>destination</em>.</h1>
+    <p class="sub">Every week we spend <b>5 minutes per lane</b> and move one stone. Each stone unlocks the next — so the path builds itself without burning anyone out. The glowing stones are <b>this week's three moves</b>. Click any stone to open it.</p>
+
+    <div class="thisweek">
+      <div class="tw-lab">This week · 5 min per lane</div>
+      <div class="tw-grid" id="tw"></div>
+    </div>
+  </header>
+
+  <section class="lanes" id="lanes"></section>
+
+  <div class="legend">
+    <span><i class="lg d"></i>Done</span>
+    <span><i class="lg n"></i>This week's move</span>
+    <span><i class="lg l"></i>Locked — unlocks when its prerequisite is done</span>
+  </div>
+
+  <footer>
+    <span>RMA — independent, aligned with Quorum 1 · destination: ship Heat in the Streets, Episode 1.</span>
+    <a href="https://github.com/RegenMediaAlliance/rma-governance" target="_blank" rel="noopener">github.com/RegenMediaAlliance/rma-governance ↗</a>
+  </footer>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="m-title">
+    <button class="x" id="mx" aria-label="Close">✕</button>
+    <div class="m-lane" id="m-lane"></div>
+    <h3 id="m-title"></h3>
+    <div class="m-who" id="m-who"></div>
+    <p id="m-desc"></p>
+    <div class="m-unlock" id="m-unlock"></div>
+    <div class="m-links" id="m-links"></div>
+  </div>
+</div>
+
+<script>
+const REPO="https://github.com/RegenMediaAlliance/rma-governance/blob/main/";
+const HUB="https://www.notion.so/quorum1/Regenerative-Media-Alliance-Hub-33d6f6ac689e802ab3a6ea287d4fa8ec";
+const FOODCOMMONS="https://quorum1.notion.site/RMA-Series-1-The-Food-Commons-Series-Concept-Review-34b6f6ac689e80fc9cd3efce8ed3855a";
+const JOSH="https://quorum1.notion.site/Josh-s-Synthesis-34c6f6ac689e80f78c82e3396d64ec4d";
+const RIVERSIDE="https://www.notion.so/quorum1/Producing-w-Riverside-APp-3626f6ac689e80b38793d41edcb50619";
+const SCOPING="https://www.notion.so/quorum1/Scoping-Effort-3626f6ac689e80cfb6fccf206a6b40d2";
+
+const LANES=[
+ {key:'content',ic:'🎬',nm:'Content',lead:'Nikki',stones:[
+   {t:'4 producers identified',s:'done',who:'Nikki',desc:'Isabari (Kenya), Tristan (California), Azrael & Alethea — all with real production experience.',unlocks:'the deliverable template',links:[['RMA Notion Hub',HUB],['Food Commons series',FOODCOMMONS]]},
+   {t:'Deliverable template + handoff',s:'now',who:'Nikki',desc:'Define exactly what each producer ships: which files, what format, what length, and the handoff point to the edit pipeline. This is what lets producers actually start.',unlocks:'producers onboarded (once the MOU lands)',links:[['Josh’s Synthesis (campaign frame)',JOSH],['Scoping effort',SCOPING]]},
+   {t:'Producers onboarded',s:'locked',who:'Nikki',desc:'Bring the 4 producers on with clear expectations + the signed agreement.',need:'Producer MOU · Governance',unlocks:'Episode 1 filming'},
+   {t:'Episode 1 filmed',s:'locked',who:'Producers',desc:'A-roll (interviews) + B-roll captured on location — ~1–1.5h footage for Basil to cut.',unlocks:'the series greenlight'},
+   {t:'Series greenlit',s:'locked',who:'Alliance',desc:'Proof-of-concept proven → expand Heat in the Streets across producers.'},
+ ]},
+ {key:'production',ic:'🎥',nm:'Production',lead:'Kurt & Venetia',stones:[
+   {t:'Tools surveyed',s:'done',who:'Kurt & Venetia',desc:'Riverside vs. iPhone capture explored; A-roll/B-roll workflow discussed.',unlocks:'the BOM',links:[['Producing w/ Riverside',RIVERSIDE]]},
+   {t:'BOM for Episode 1',s:'now',who:'Kurt & Venetia',desc:'The build-of-materials: the exact tool + people stack to make Episode 1. Turns “we should film” into “here’s how.”',unlocks:'the capture kit',links:[['Producing w/ Riverside',RIVERSIDE],['Scoping effort',SCOPING]]},
+   {t:'Capture kit ready',s:'locked',who:'Kurt & Venetia',desc:'Cameras, audio, remote-recording set up per the BOM; producers equipped.',unlocks:'the edit pipeline'},
+   {t:'Edit pipeline (Basil)',s:'locked',who:'Basil',desc:'Footage → finished 30-min episode. Depends on Content’s deliverable template so Basil knows what arrives.',need:'Deliverable template · Content',unlocks:'Episode 1 delivery'},
+   {t:'Episode 1 delivered',s:'locked',who:'Production',desc:'The finished episode — the proof of concept.'},
+ ]},
+ {key:'governance',ic:'📜',nm:'Governance',lead:'Sage & Ed',stones:[
+   {t:'Gov repo live',s:'done',who:'Done tonight',desc:'Release 0 published: charter, structure, change-process. The public record exists.',unlocks:'the producer MOU + ratification',links:[['View the repo',"https://github.com/RegenMediaAlliance/rma-governance"],['Charter draft',REPO+'charter.md']]},
+   {t:'Producer MOU',s:'now',who:'Sage & Ed',desc:'Draft the producer compensation agreement. This is the keystone — it’s “governance,” but it’s what unblocks Nikki’s producers. Everything in Content waits on this.',unlocks:'producers onboarded (Content)',links:[['Member-rights stub',REPO+'docs/member-rights.md'],['Pathway ahead',REPO+'PATHWAY-AHEAD.md']]},
+   {t:'Charter ratified',s:'locked',who:'Alliance',desc:'Adopt Charter v0.1 at a Wednesday call — the Release 0 baseline.',need:'Wednesday decision',unlocks:'articles & bylaws',links:[['Charter draft',REPO+'charter.md']]},
+   {t:'Articles + bylaws + website link',s:'locked',who:'Sage & Ed',desc:'Legal wrapper drafted; gov-repo link added to the Regen Media Studio site.',unlocks:'member rights'},
+   {t:'Member rights filled',s:'locked',who:'Alliance',desc:'Ed’s #1 gap + Josh’s surplus-distribution piece, written together by PR.',links:[['Member-rights stub',REPO+'docs/member-rights.md']]},
+ ]},
+];
+
+// this-week strip
+document.getElementById('tw').innerHTML=LANES.map(L=>{
+  const n=L.stones.find(s=>s.s==='now');
+  return `<div class="tw" data-l="${L.key}" data-i="${L.stones.indexOf(n)}">
+    <div class="lane">${L.ic} ${L.nm}</div>
+    <div class="move">${n.t}</div><div class="who">${n.who}</div></div>`;
+}).join('');
+
+// lanes
+document.getElementById('lanes').innerHTML=LANES.map(L=>{
+  const stones=L.stones.map((s,i)=>{
+    const ic=s.s==='done'?'✓':s.s==='locked'?'🔒':'';
+    return `<div class="stone ${s.s}" data-l="${L.key}" data-i="${i}" tabindex="0" role="button" aria-label="${s.t}">
+      <span class="dot">${ic}</span>
+      <span><span class="s-t">${s.t}</span><span class="s-meta">${s.who}</span>${s.need?`<br><span class="needs">⛓ needs: ${s.need}</span>`:''}</span>
+    </div>`;
+  }).join('');
+  return `<div class="lane">
+    <div class="lane-head"><span class="lane-ic">${L.ic}</span><span class="lane-nm">${L.nm}</span><span class="lane-lead">${L.lead}</span></div>
+    <div class="track">${stones}<div class="dest"><span class="flag">🏁</span>Episode&nbsp;1</div></div>
+  </div>`;
+}).join('');
+
+// modal
+const ov=document.getElementById('overlay');
+function openM(l,i){
+  const L=LANES.find(x=>x.key===l), s=L.stones[i];
+  document.getElementById('m-lane').innerHTML=`${L.ic} ${L.nm}<span class="m-pin ${s.s}">${s.s==='now'?'This week':s.s==='done'?'Done':'Locked'}</span>`;
+  document.getElementById('m-title').textContent=s.t;
+  document.getElementById('m-who').textContent='▷ '+s.who;
+  document.getElementById('m-desc').textContent=s.desc;
+  const u=document.getElementById('m-unlock');
+  u.innerHTML = (s.need?`<div style="color:var(--clay);margin-bottom:6px">⛓ Waiting on: <b style="color:var(--clay)">${s.need}</b></div>`:'') + (s.unlocks?`Unlocks → <b>${s.unlocks}</b>`:'This is a destination step.');
+  const lk=document.getElementById('m-links');
+  lk.innerHTML=(s.links||[]).map(([t,h])=>`<a href="${h}" target="_blank" rel="noopener">${t}<span>↗</span></a>`).join('') || '';
+  ov.classList.add('open');document.getElementById('mx').focus();
+}
+function closeM(){ov.classList.remove('open')}
+document.addEventListener('click',e=>{
+  const t=e.target.closest('[data-l][data-i]');
+  if(t){openM(t.dataset.l,+t.dataset.i);return}
+  if(e.target===ov||e.target.id==='mx')closeM();
+});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape')closeM();
+  const t=document.activeElement;
+  if((e.key==='Enter'||e.key===' ')&&t&&t.dataset&&t.dataset.l){e.preventDefault();openM(t.dataset.l,+t.dataset.i)}
+});
+</script>
+</body>
+</html>
