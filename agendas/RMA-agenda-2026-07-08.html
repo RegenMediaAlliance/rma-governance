@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>RMA Production Meeting — 2026-07-08</title>
+<style>
+:root{
+  --bg:#0b0f1a; --panel:#131a2b; --panel2:#0f1524; --ink:#eef2fb; --muted:#9fb0cc; --line:#26314a;
+  --seed:#8b7bff; --discuss:#2dd4bf; --plan:#f5b13d; --do:#4ade80; --red:#ff6b6b; --amberbg:#2a2113;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,Segoe UI,Roboto,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:2rem 1.5rem 4rem}
+header{border-bottom:3px solid var(--seed);padding-bottom:1.1rem;margin-bottom:1.4rem}
+h1{font-size:1.55rem;letter-spacing:-.01em}
+h1 span{color:var(--seed)}
+.meta{color:var(--muted);font-size:.92rem;margin-top:.45rem}
+.meta b{color:var(--ink);font-weight:600}
+.contract{background:linear-gradient(90deg,rgba(139,123,255,.16),rgba(45,212,191,.10));border:1px solid var(--seed);border-radius:12px;padding:1rem 1.15rem;margin:1.2rem 0}
+.contract .big{font-size:1.15rem;font-weight:700}
+.contract .beats{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.6rem}
+.chip{font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.5px;padding:.28rem .7rem;border-radius:999px}
+.c-dx{background:rgba(45,212,191,.16);color:var(--discuss);border:1px solid var(--discuss)}
+.c-p{background:rgba(245,177,61,.15);color:var(--plan);border:1px solid var(--plan)}
+.c-d{background:rgba(74,222,128,.14);color:var(--do);border:1px solid var(--do)}
+.tone{color:var(--muted);font-size:.9rem;margin:.8rem 0 0;border-left:3px solid var(--line);padding-left:.8rem;font-style:italic}
+section{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.25rem;margin:1rem 0}
+section.dx{border-left:5px solid var(--discuss)} section.p{border-left:5px solid var(--plan)} section.d{border-left:5px solid var(--do)} section.open{border-left:5px solid var(--seed)}
+.sh{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;margin-bottom:.7rem}
+.sh h2{font-size:1.15rem}
+.time{margin-left:auto;color:var(--muted);font-size:.8rem;font-weight:600;background:var(--panel2);border:1px solid var(--line);padding:.2rem .6rem;border-radius:999px;white-space:nowrap}
+.beat{font-size:.72rem;font-weight:800;letter-spacing:.5px;padding:.16rem .5rem;border-radius:5px}
+.b-dx{background:rgba(45,212,191,.16);color:var(--discuss)} .b-p{background:rgba(245,177,61,.15);color:var(--plan)} .b-d{background:rgba(74,222,128,.14);color:var(--do)}
+ul{list-style:none;margin:.3rem 0} li{position:relative;padding:.32rem 0 .32rem 1.3rem;border-bottom:1px solid rgba(38,49,74,.5)} li:last-child{border-bottom:none}
+li::before{content:"›";position:absolute;left:.2rem;color:var(--seed);font-weight:700}
+li b, .say b{color:#fff}
+.say{color:var(--muted);font-style:italic}
+.who{color:var(--do);font-weight:700}
+.decisions{background:var(--panel2);border:1px dashed var(--plan);border-radius:10px;padding:.9rem 1.1rem;margin-top:.9rem}
+.decisions h3{color:var(--plan);font-size:.95rem;margin-bottom:.5rem}
+.decisions .note{color:var(--muted);font-size:.85rem;margin-bottom:.5rem}
+.dchk{display:flex;align-items:flex-start;gap:.55rem;padding:.28rem 0}
+.dchk .box{width:1.05rem;height:1.05rem;border:2px solid var(--plan);border-radius:4px;flex:0 0 auto;margin-top:.15rem}
+.dchk .n{color:var(--plan);font-weight:800;margin-right:.1rem}
+.appx{margin-top:2rem}
+.appx.private{background:rgba(255,107,107,.06);border:1px solid var(--red);border-left:5px solid var(--red)}
+.appx.private h2{color:var(--red)}
+.privtag{display:inline-block;background:var(--red);color:#1a0000;font-weight:800;font-size:.7rem;letter-spacing:.5px;text-transform:uppercase;padding:.15rem .55rem;border-radius:5px;margin-left:.4rem}
+.src{color:var(--muted);font-size:.8rem;margin-top:1.5rem;border-top:1px solid var(--line);padding-top:.9rem}
+a{color:var(--discuss)}
+@media print{body{background:#fff;color:#000}.wrap{max-width:none}section,.contract{border-color:#bbb;background:#fff;break-inside:avoid}.time,.beat,.chip{border:1px solid #999}.appx.private{background:#fff}h1 span,.contract .big{color:#000}}
+</style></head>
+<body><div class="wrap">
+
+<header>
+  <h1>RMA Production Meeting — <span>Wed, July 8 · 5:00pm ET</span></h1>
+  <div class="meta"><b>Host:</b> Sage &nbsp;·&nbsp; <b>Room:</b> Nikki · Kurt · Venetia · Ed · Josh · Sophia &nbsp;(+ new — <b>Danny</b> = priority invite)<br>
+  <b>Input:</b> Monday's Ed/Sage 1:1 (~2h). Its whole thrust was <i>"rebuild this exact call."</i> Tonight you open a new mode.</div>
+</header>
+
+<div style="display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:0 0 1.2rem;padding:.7rem .9rem;background:var(--panel2);border:1px solid var(--line);border-radius:10px">
+  <span style="color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.5px;font-size:.7rem;margin-right:.2rem">Core docs →</span>
+  <a href="https://app.notion.com/p/390d1355bf128100aab5ffdd58578dcd" style="color:var(--seed);text-decoration:none;background:rgba(139,123,255,.12);border:1px solid var(--line);padding:.26rem .62rem;border-radius:999px;font-size:.83rem">🎯 Mission Control</a>
+  <a href="https://app.notion.com/p/89e92b4b1fcb4015a159ed31bcf31a73" style="color:var(--plan);text-decoration:none;background:rgba(245,177,61,.1);border:1px solid var(--line);padding:.26rem .62rem;border-radius:999px;font-size:.83rem">✅ Action Items</a>
+  <a href="https://github.com/RegenMediaAlliance/rma-governance" style="color:var(--discuss);text-decoration:none;background:rgba(45,212,191,.1);border:1px solid var(--line);padding:.26rem .62rem;border-radius:999px;font-size:.83rem">📜 Governance repo</a>
+  <a href="https://regenmedia.studio/pathway" style="color:var(--do);text-decoration:none;background:rgba(74,222,128,.1);border:1px solid var(--line);padding:.26rem .62rem;border-radius:999px;font-size:.83rem">🌐 Site / Pathway</a>
+  <a href="https://form.jotform.com/261798961199075" style="color:var(--ink);text-decoration:none;background:var(--panel);border:1px solid var(--line);padding:.26rem .62rem;border-radius:999px;font-size:.83rem">👥 Intake (Jotform)</a>
+</div>
+
+<div class="contract">
+  <div class="big">Run tonight <span style="color:var(--seed)">ON</span> the new contract — name it <em>and</em> practice it in the same call.</div>
+  <div class="beats"><span class="chip c-dx">Discuss</span><span class="chip c-p">Plan</span><span class="chip c-d">Do</span></div>
+  <div class="tone">Tone (Ed, Monday): lead with the ask, keep it fun and member-voiced — don't over-explain the "why."</div>
+</div>
+
+<section class="open">
+  <div class="sh"><h2>0 · Open</h2><span class="time">5 min</span></div>
+  <ul>
+    <li>Welcome; intro the new faces (<b>Danny</b> first). "This call feels different starting today."</li>
+    <li class="say">Name the frame: <b>"We're going to run these on one simple contract — Plan · Do · Discuss — and you'll feel it tonight."</b></li>
+  </ul>
+</section>
+
+<section class="dx">
+  <div class="sh"><span class="beat b-dx">Discuss</span><h2>1 · Where we are, what's alive</h2><span class="time">10 min</span></div>
+  <p class="say" style="margin-bottom:.5rem">Discuss is the review beat that opens every call.</p>
+  <ul>
+    <li><b>60-sec reframe — RMA is the <span style="color:var(--seed)">seed</span>:</b> anti-extractive, deliberately small — <i>Linux Foundation, not the studios built on top of it</i> (Smoking Tigers, Regen B, your own). Nobody extracts from RMA. <b>You give an hour, you get an hour</b> (value by role, not person).</li>
+    <li><b>The line — where RMA stops:</b> RMA carries you through planning, review, co-creation. The moment it's MOUs / contracts / incubation / money moving, that's <i>past</i> RMA → Smoking Tigers or your chosen incubator. <b>RMA advises; RMA is not your lawyer.</b></li>
+    <li><b>Open floor:</b> what's alive in each lane since last time? (Content/Nikki · Production/Kurt+Venetia · Governance/Sage+Ed)</li>
+  </ul>
+</section>
+
+<section class="p">
+  <div class="sh"><span class="beat b-p">Plan</span><h2>2 · What we decide &amp; set up</h2><span class="time">22 min</span></div>
+  <ul>
+    <li><b>Two ways to contribute</b> (simplifies the 3 lanes): you either <b>support the ecosystem</b> (RMA itself) <i>or</i> <b>support a project.</b> Governance folds into "keep the ecosystem healthy." → react.</li>
+    <li><b>Onboarding = the "canned food drive":</b> membership costs <b>one piece of content you already own</b> (B-roll, a series). You keep ownership; on the way in you say what you're building + what you bring. Light agreement; add complexity only when needed.</li>
+    <li><b>First collective project — ONE shared YouTube channel:</b> all of us → <b>1,000 subscribers + 4,000 watched hours → monetized</b> → ad revenue shares back to contributors (beaver-pond); RMA keeps ~3–5% to fund itself. <b>Source existing content</b> (Bloom, via Danny) — <i>stop making new.</i></li>
+    <li><b>The cadence = Plan · Do · Discuss made concrete:</b> <b>Wed = Plan · Fri = Do · Discuss opens each.</b> Open-office feel, breakout rooms, recorded on Riverside (doubles as content); side/workshop calls log into one searchable meetings DB, reviewed at the top of each call. <b>→ Formalize tonight:</b> what each beat means, who owns it, how it maps onto the lanes.</li>
+  </ul>
+  <div class="decisions">
+    <h3>★ Decisions to land</h3>
+    <div class="note">If the room's thin / new-heavy, land the first two firmly; let the rest breathe.</div>
+    <div class="dchk"><span class="box"></span><span><span class="n">1.</span> <b>Plan (Wed) / Do (Fri) cadence</b>, open-office, recorded.</span></div>
+    <div class="dchk"><span class="box"></span><span><span class="n">2.</span> <b>Shared channel</b> = RMA's first collective project (1k subs / 4k watch-hrs).</span></div>
+    <div class="dchk"><span class="box"></span><span><span class="n">3.</span> Content-donation onboarding (canned-food-drive).</span></div>
+    <div class="dchk"><span class="box"></span><span><span class="n">4.</span> RMA-as-seed scope — stops at co-creation.</span></div>
+    <div class="dchk"><span class="box"></span><span><span class="n">5.</span> Content pivot: curate existing (Bloom), don't produce new.</span></div>
+  </div>
+</section>
+
+<section class="d">
+  <div class="sh"><span class="beat b-d">Do</span><h2>3 · Actions that leave the room tonight</h2><span class="time">13 min</span></div>
+  <ul>
+    <li><span class="who">Kurt</span> → set up <b>Riverside</b> live-streaming for these calls (also shows Nikki what Riverside is).</li>
+    <li><span class="who">Danny</span> → two-part: (a) does <b>Bloom</b> have shareable content? (b) open to sharing it? (onboarding self-select comes after a yes)</li>
+    <li><span class="who">Venetia + Kurt</span> → book a <b>content-creation workshop</b> on Venetia's SA morning slot, this week or next (Sage can't before Wed).</li>
+    <li><span class="who">Everyone</span> → the low-bar channel asks that hit the thresholds: <b>watch · like · comment · subscribe · share.</b></li>
+    <li><span class="who">Nikki</span> → we're <i>not</i> asking you to make new content or draft MOUs — we'll <b>feed you existing content</b> to shape under the food-sovereignty umbrella. Don't let us over-prescribe your process.</li>
+  </ul>
+</section>
+
+<section class="open">
+  <div class="sh"><h2>4 · Close</h2><span class="time">3 min</span></div>
+  <ul>
+    <li>Recap the decisions + who owns what.</li>
+    <li>Confirm the next beat: <b>Friday = the Do call.</b></li>
+  </ul>
+</section>
+
+<div class="src">Source: Zoom transcript "RMA: Ed / Sage — Open Space," 2026-07-06 (~2h). Anchor — Sage: <i>"Just make RMA the seed… anti-extractive… everyone comes in, helps co-create, then launches those things."</i> Ed: <i>"everything you said, I 100% agree."</i></div>
+
+</div></body></html>
